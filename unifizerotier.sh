@@ -1,10 +1,10 @@
 #!/bin/bash
 
 
-if [ -z "$1" ]; then
-  echo "Error: missing networkid of zerotier"
-  exit 1
-fi
+#if [ -z "$1" ]; then
+#  echo "Error: missing networkid of zerotier"
+#  exit 1
+#fi
 
 mkdir -p /config/data/firstboot/install-packages
 cd /config/data/firstboot/install-packages
@@ -31,6 +31,7 @@ gzip data.tar
 ar -r zerotier-one.deb debian-binary control.tar.gz data.tar.gz
 sudo dpkg -i zerotier-one.deb
 
-echo "joining zerotier network: $1"
-sleep 15
-sudo zerotier-cli join $1
+echo "join zerotier network with command: sudo zerotier-cli join <networkid>"
+#echo "joining zerotier network: $1"
+#sleep 15
+#sudo zerotier-cli join $1
