@@ -9,7 +9,7 @@
 mkdir -p /config/data/firstboot/install-packages
 cd /config/data/firstboot/install-packages
 
-read -p "What type of architecture is the device using? (Enter m (mips64) or a (aarch64))" architecture
+read -p "What type of architecture is the device using? (Enter m (mips64) or a (aarch64)) " architecture
 if [[ $architecture == "m" ]]
    then 
        curl https://download.zerotier.com/dist/ubiquiti/zerotier-one_mips64.deb --output /config/data/firstboot/install-packages/zerotier-one.deb
