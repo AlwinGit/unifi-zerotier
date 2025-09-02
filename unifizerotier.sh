@@ -32,5 +32,5 @@ ar -r zerotier-one.deb debian-binary control.tar.gz data.tar.gz
 sudo dpkg -i zerotier-one.deb
 
 echo "joining zerotier network: $1"
-sleep 2
+sleep 15
 sudo zerotier-cli join $1
